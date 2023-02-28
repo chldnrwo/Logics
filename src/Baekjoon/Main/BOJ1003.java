@@ -1,6 +1,7 @@
+package Baekjoon.Main;
 import java.util.Scanner;
 
-class Main{
+class BOJ1003{
 	static int zero, one;
 	static Integer[] arrZ ,arrO;
 	public static void main(String[] args) {
