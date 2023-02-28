@@ -1,7 +1,8 @@
+package Baekjoon.Main;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Main{
+class BOJ1759{
 	static String[] arr;
 	static String[] pwd;
 	static int L,C;
