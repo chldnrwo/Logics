@@ -1,8 +1,9 @@
+package Baekjoon.Main;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Main{
+class BOJ15686{
 	static int[][] arr;
 	static List<Pair> listC = new ArrayList<>();
 	static List<Pair> listH = new ArrayList<>();
