@@ -5,28 +5,34 @@ class Main{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
-		int N = in.nextInt();
+		int N=in.nextInt();
 		
-		int[] A = new int[N];
-		int[] B = new int[N];
+		int[] arr = new int[N];
 		
 		for(int i=0;i<N;i++) {
-			A[i]=in.nextInt();
-		}
-		for(int i=0;i<N;i++) {
-			B[i]=in.nextInt();
+			arr[i]=in.nextInt();
 		}
 		
-		Arrays.sort(A);
-		Arrays.sort(B);
+		int[] arrB = arr.clone();
+		Arrays.sort(arrB);
+		//System.out.println(Arrays.toString(arr));
+		//System.out.println(Arrays.toString(arrB));
 		
-		//System.out.println(Arrays.toString(A));
-		//System.out.println(Arrays.toString(B));
-		int sum=0;
+		Integer[] arrR = new Integer[N];
 		for(int i=0;i<N;i++){
-			sum+=A[i] * B[N-1-i];
+			int a = arrB[i];
+			for(int j=0;j<N;j++) {
+				if(a==arr[j]) {
+					if(arrR[j]==null) {
+						arrR[j]=i;	
+						break;
+					}
+				}
+			}
 		}
-		System.out.println(sum);
+		for(int i=0;i<N;i++) {
+			System.out.print(arrR[i]+" ");
+		}
+		
 	}
 }
-//가장 낮은수랑 매칭해야됨
