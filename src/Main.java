@@ -2,46 +2,31 @@ import java.util.Scanner;
 
 class Main{
 	public static void main(String[] args) {
-		
 		Scanner in = new Scanner(System.in);
 		
 		int N = in.nextInt();
-		int M = in.nextInt();
-		
-		int[][] arr = new int[N][M];
-		
-		for(int i=0;i<N;i++) {
-			String s = in.next();
-			for(int j=0;j<M;j++) {
-				arr[i][j] = s.charAt(j);
-			}
+		int K = in.nextInt();
+		int cnt=0;
+		if(N<=K) {
+			System.out.println(0);
+			return;
 		}
-		
-		int MaxL = Math.min(N, M)-1;
-		
-		int res=0;
+		int buy = 0;
 		while(true) {
-			
-			for(int i=0;i<N-(MaxL);i++) {
-				for(int j=0;j<M-(MaxL);j++) {
-					if(arr[i][j]==arr[i][j+MaxL]
-						&&arr[i][j]==arr[i+MaxL][j]
-						&&arr[i][j]==arr[i+MaxL][j+MaxL]) {
-						res = (MaxL+1) * (MaxL+1);
-						System.out.println(res);
-						System.exit(0);
-					}
+			cnt = 0;
+			int copyN = N;
+			while(copyN !=0) {
+				if(copyN %2 == 1) {
+					cnt+=1;
 				}
+				copyN /=2;
 			}
-			MaxL--;
+			if(cnt<=K) {
+				break;
+			}
+			N+=1;
+			buy+=1;
 		}
-		
-//		for(int i=0;i<N;i++) {
-//			for(int j=0;j<M;j++) {
-//				System.out.print(arr[i][j]-48);
-//				
-//			}
-//			System.out.println();
-		
+		System.out.println(buy);
 	}
 }
