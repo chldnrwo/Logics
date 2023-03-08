@@ -5,28 +5,31 @@ class Main{
 		Scanner in = new Scanner(System.in);
 		
 		int N = in.nextInt();
-		int K = in.nextInt();
+		int a = in.nextInt();
+		int b = in.nextInt();
+		
 		int cnt=0;
-		if(N<=K) {
-			System.out.println(0);
-			return;
-		}
-		int buy = 0;
 		while(true) {
-			cnt = 0;
-			int copyN = N;
-			while(copyN !=0) {
-				if(copyN %2 == 1) {
-					cnt+=1;
-				}
-				copyN /=2;
+			if(a%2==0) {
+				a/=2;
+			}else {
+				a = a/2+1;
 			}
-			if(cnt<=K) {
+			
+			if(b%2==0) {
+				b/=2;
+			}else {
+				b = b/2+1;
+			}
+			cnt++;
+			
+			if(a==b) {
 				break;
 			}
-			N+=1;
-			buy+=1;
+			
 		}
-		System.out.println(buy);
+		System.out.println(cnt);
+		
 	}
+	
 }
