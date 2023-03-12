@@ -1,48 +1,92 @@
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 class Main{
+	static String king,stone;
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
-		int L = in.nextInt();
-		int[] arr = new int[L];
-		for(int i=0;i<L;i++) {
-			arr[i] = in.nextInt();
+		king = in.next();
+		stone = in.next();
+		int t = in.nextInt();
+
+		for(int i=0;i<t;i++) {
+			String m = in.next();
+			
+			move(m);
 		}
-		//Arrays.sort(arr);
-		int n = in.nextInt();
-		int a = 0;
-		int b = 1001;
 		
-		for(int i=0;i<L-1;i++) {
-			if(arr[i] < n) {
-				if( arr[i] > a) {
-					a = arr[i];
-				}
-			}else if(arr[i] > n) {
-				if(arr[i] < b) {
-					b = arr[i];
-				}
-			}else {	
-				System.out.println(0);
-				return;
+		System.out.println(king);
+		System.out.println(stone);
+	}
+	public static void move(String s) {
+		char xk = king.charAt(0);
+		char xs = stone.charAt(0);
+		
+		int yk = king.charAt(1)-48;
+		int ys = stone.charAt(1)-48;
+		
+		if(s.equals("R")) {
+			xk++;
+		}else if(s.equals("L")) {
+			xk--;
+		}else if(s.equals("B")) {
+			yk--;
+		}else if(s.equals("T")) {
+			yk++;
+		}else if(s.equals("RT")) {
+			xk++;
+			yk++;
+		}else if(s.equals("LT")) {
+			xk--;
+			yk++;
+		}else if(s.equals("RB")) {
+			xk++;
+			yk--;
+		}else if(s.equals("LB")) {
+			xk--;
+			yk--;
+		}
+		
+		//System.out.println(xk+" "+yk+" "+xs+" "+ys);
+		
+		if(xk==xs && yk==ys) {
+			if(s.equals("R")) {
+				xs++;
+			}else if(s.equals("L")) {
+				xs--;
+			}else if(s.equals("B")) {
+				ys--;
+			}else if(s.equals("T")) {
+				ys++;
+			}else if(s.equals("RT")) {
+				xs++;
+				ys++;
+			}else if(s.equals("LT")) {
+				xs--;
+				ys++;
+			}else if(s.equals("RB")) {
+				xs++;
+				ys--;
+			}else if(s.equals("LB")) {
+				xs--;
+				ys--;
 			}
 		}
 		
-		int cnt=0;
-		for(int i=a+1;i<=n;i++) {
-			for(int j=n;j<=b-1;j++) {
-				if(i!=j) {
-					cnt++;					
-				}	
-			}
+		//System.out.println(xk+" "+yk+" "+xs+" "+ys);
+		
+		if('A'<=xk && xk<= 'H' &&
+			1<=yk && yk<=8 &&
+			'A'<=xs && xs<= 'H' &&
+			1<=ys && ys<=8
+				) {
+			//System.out.println(xk+" "+yk+" "+xs+" "+ys);
+			king = String.valueOf(xk)+Integer.toString(yk);
+			stone = String.valueOf(xs)+Integer.toString(ys);
 		}
 		
-		System.out.println(cnt);
 		
 	}
-	
 }
+
+//킹이 돌이 잇는곳을 가면 같은 방향으로 돌 이동
