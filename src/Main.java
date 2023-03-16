@@ -1,36 +1,26 @@
 import java.util.Scanner;
 
 class Main{
-	static long x,y,r;
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
-		x = in.nextInt();
-		y = in.nextInt();
+		long a = in.nextLong();
+		long b = in.nextLong();
 		
-		r = y*100/x;  //88
-		if(r>=99) {
-			System.out.println(-1);
-			return;
-		}
-		bi(0, 1000000000);
+		long c = eucd(a, b);
 		
+		a /= c;
+		b /= c;
+		
+		System.out.println(a*b*c);
 	}
-	public static void bi(int bot, int top) {
-		int mid = (bot+top)/2;
-		int z = (int) ((y+mid)*100/(x+mid));
-		
-		if(bot>top) {
-			System.out.println(mid+1);
-			return;
-		}
-		
-		if(r >= z) {
-			bi(mid+1, top);
+	
+	public static long eucd(long a,long b) {
+		long r = a%b;
+		if(r==0) {
+			return b;
 		}else {
-			bi(bot, mid-1);
+			return eucd(b, r);
 		}
 	}
 }
-//시간초과 시뮬레이션 말고 수학으로 풀어야됨
-//이분탐색문제였음
