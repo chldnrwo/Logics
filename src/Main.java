@@ -4,19 +4,28 @@ class Main{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
-		long a = in.nextLong();
-		long b = in.nextLong();
+		int a = in.nextInt();
+		int b = in.nextInt();
+		int c = in.nextInt();
+		int d = in.nextInt();
 		
-		long c = eucd(a, b);
+		int z = eucd(b, d);
+		b/=z;
+		d/=z;
+		a = a*d;
+		c = c*b;
+		int x = a+c;
+		int y = b*d*z;
 		
-		a /= c;
-		b /= c;
+		int z2 = eucd(x, y);
 		
-		System.out.println(a*b*c);
+		x/=z2;
+		y/=z2;
+		System.out.println(x+" "+y);
 	}
 	
-	public static long eucd(long a,long b) {
-		long r = a%b;
+	public static int eucd(int a,int b) {
+		int r = a%b;
 		if(r==0) {
 			return b;
 		}else {
