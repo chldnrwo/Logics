@@ -1,41 +1,35 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 class Main{
+	static int cnt;
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		StringBuilder sb = new StringBuilder(); 
-		int t = in.nextInt();
+		int n = in.nextInt();
+		int r = in.nextInt();
+		int c = in.nextInt();
+		cnt=0;
+		int size = (int)Math.pow(2, n);
+		bh(size, r, c);
+		System.out.println(cnt);
 		
-		boolean[] sosu = new boolean[1000001];
-        sosu[0] = sosu[1] = true;
-        for (int i = 2; i * i <= 1000000; i++) {
-            if (!sosu[i]) {
-                for (int j = i + i; j <= 1000000; j += i) {
-                    sosu[j] = true;
-                }
-            }
-        }
-		
-		for(int i=0;i<t;i++) {
-			int n = in.nextInt();
-			int cnt = 0;
-			
-			for(int j=0;j<=n/2;j++) {
-				if(!sosu[j] && !sosu[n-j]) {
-					cnt++;
-				}
-			}
-			sb.append(cnt).append("\n");
-		}
-		
-		
-		
-		System.out.println(sb);
 	}
-	
-	
+	public static void bh(int size, int r, int c) {
+		if(size==1) {
+			return;
+		}
+		if(r<size/2 && c<size/2) {
+			bh(size/2, r, c);
+		}else if(r<size/2 && c>=size/2) {
+			cnt += size * size / 4;
+			bh(size/2, r, c-size/2);
+		}else if(r>=size/2 && c<size/2) {
+			cnt += size * size / 4 * 2;
+			bh(size/2, r-size/2, c);
+		}else if(r>=size/2 && c>=size/2) {
+			cnt += size * size / 4 * 3;
+			bh(size/2, r-size/2, c-size/2);
+		}
+	}
 }
-
-//시간초과
+//분할정복
+//최대는 2^15 * 2^15
