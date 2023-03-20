@@ -1,35 +1,117 @@
 import java.util.Scanner;
 
 class Main{
-	static int cnt;
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int n = in.nextInt();
-		int r = in.nextInt();
-		int c = in.nextInt();
-		cnt=0;
-		int size = (int)Math.pow(2, n);
-		bh(size, r, c);
-		System.out.println(cnt);
 		
-	}
-	public static void bh(int size, int r, int c) {
-		if(size==1) {
-			return;
+		String a = in.next();
+		String b = in.next();
+		String c = in.next();
+		
+		int A = 0;
+		int B = 0;
+		int C = 0;
+		
+		switch(a) {
+		case "black":
+			A = 0;
+			break;
+		case "brown":
+			A = 1;
+			break;
+		case "red":
+			A = 2;
+			break;
+		case "orange":
+			A = 3;
+			break;
+		case "yellow":
+			A = 4;
+			break;
+		case "green":
+			A = 5;
+			break;
+		case "blue":
+			A = 6;
+			break;
+		case "violet":
+			A = 7;
+			break;
+		case "grey":
+			A = 8;
+			break;
+		case "white":
+			A = 9;
+			break;
 		}
-		if(r<size/2 && c<size/2) {
-			bh(size/2, r, c);
-		}else if(r<size/2 && c>=size/2) {
-			cnt += size * size / 4;
-			bh(size/2, r, c-size/2);
-		}else if(r>=size/2 && c<size/2) {
-			cnt += size * size / 4 * 2;
-			bh(size/2, r-size/2, c);
-		}else if(r>=size/2 && c>=size/2) {
-			cnt += size * size / 4 * 3;
-			bh(size/2, r-size/2, c-size/2);
+		
+		switch(b) {
+		case "black":
+			B = 0;
+			break;
+		case "brown":
+			B = 1;
+			break;
+		case "red":
+			B = 2;
+			break;
+		case "orange":
+			B = 3;
+			break;
+		case "yellow":
+			B = 4;
+			break;
+		case "green":
+			B = 5;
+			break;
+		case "blue":
+			B = 6;
+			break;
+		case "violet":
+			B = 7;
+			break;
+		case "grey":
+			B = 8;
+			break;
+		case "white":
+			B = 9;
+			break;
 		}
+		
+		switch(c) {
+		case "black":
+			C = 1;
+			break;
+		case "brown":
+			C = 10;
+			break;
+		case "red":
+			C = 100;
+			break;
+		case "orange":
+			C = 1000;
+			break;
+		case "yellow":
+			C = 10000;
+			break;
+		case "green":
+			C = 100000;
+			break;
+		case "blue":
+			C = 1000000;
+			break;
+		case "violet":
+			C = 10000000;
+			break;
+		case "grey":
+			C = 100000000;
+			break;
+		case "white":
+			C = 1_000_000_000;
+			break;
+		}
+		
+		long result = (long)(A*10+B)*C;
+		System.out.println(result);
 	}
 }
-//분할정복
-//최대는 2^15 * 2^15
