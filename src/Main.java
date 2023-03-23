@@ -4,7 +4,12 @@ class Main{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
-		long n = in.nextLong();
-		System.out.println(n*4);
+		int n = in.nextInt();
+		int cnt = 0;
+		while(n>0) {
+			cnt+=n%2;
+			n/=2;
+		}
+		System.out.println(cnt);
 	}
 }
