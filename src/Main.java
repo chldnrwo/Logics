@@ -3,34 +3,18 @@ import java.util.Scanner;
 class Main{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		int a = in.nextInt();
+		int b = in.nextInt();
+		int c = in.nextInt();
+		int d = in.nextInt();
+		int e = in.nextInt();
+		int f = in.nextInt();
 		
-		int t = in.nextInt();
 		
-		int maxX = Integer.MIN_VALUE;
-		int maxY = Integer.MIN_VALUE;
-		int minX = Integer.MAX_VALUE;
-		int minY = Integer.MAX_VALUE;
+		//(a*e - d*b)X = c*e - b*f
+		int x = (c*e - b*f) / (a*e - d*b);
+		int y = (c*d - f*a) / (b*d - a*e);
 		
-		for(int i=0;i<t;i++) {
-			int a = in.nextInt();
-			int b = in.nextInt();
-			
-			if(maxX <= a) {
-				maxX = a;
-			}
-			if(maxY <= b) {
-				maxY = b;
-			}
-			
-			if(minX >= a) {
-				minX = a;
-			}
-			if(minY >= b) {
-				minY = b;
-			}
-		}
-		
-		int result = (maxX - minX) * (maxY - minY);
-		System.out.println(result);
+		System.out.println(x+" "+y);
 	}
 }
