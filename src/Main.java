@@ -1,20 +1,40 @@
 import java.util.Scanner;
 
 class Main{
+	static int[] arr;
+	static int[] arrS = new int[6];
+	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int a = in.nextInt();
-		int b = in.nextInt();
-		int c = in.nextInt();
-		int d = in.nextInt();
-		int e = in.nextInt();
-		int f = in.nextInt();
 		
+		while(true) {
+			int a = in.nextInt();
+			if(a==0) {
+				break;
+			}
+			
+			arr = new int[a];
+			for(int i=0;i<a;i++) {
+				arr[i] = in.nextInt();
+			}
+			
+			bt(0, 0);
+			sb.append("\n");
+		}
+		System.out.println(sb);
+	}
+	public static void bt(int depth, int start) {
+		if(depth==6) {
+			for(int i=0;i<6;i++) {
+				sb.append(arrS[i]).append(" ");
+			}
+			sb.append("\n");
+			return;
+		}
 		
-		//(a*e - d*b)X = c*e - b*f
-		int x = (c*e - b*f) / (a*e - d*b);
-		int y = (c*d - f*a) / (b*d - a*e);
-		
-		System.out.println(x+" "+y);
+		for(int i=start;i<arr.length;i++) {
+			arrS[depth] = arr[i];
+			bt(depth+1, i+1);
+		}
 	}
 }
