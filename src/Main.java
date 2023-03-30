@@ -1,26 +1,25 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 class Main{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		StringBuilder sb = new StringBuilder();
 		
-		int n = in.nextInt();
-		int a = 0;
-		int cnt = 2;
-		while(a != n) {
-			cnt = cnt+cnt-1;
-			a++;
+		String N = in.next();
+		int B = in.nextInt();
+		int len = N.length();
+		
+		int sum=0;
+		for(int i=len-1;i>=0;i--) {
+			char a = N.charAt(i);
+			int num;
+			if(a-57>0) {
+				num = a - 55; 
+			}else {
+				num = a - 48;
+			}
+			int z = (int) Math.pow(B, len-1-i);
+			sum += num*z;
 		}
-		System.out.println(cnt*cnt);
+		System.out.println(sum);
 	}
 }
-/*
- * 2
- * 3
- * 5
- * 9
- * 17
- * 33
- */
