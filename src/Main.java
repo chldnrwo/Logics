@@ -5,21 +5,21 @@ import java.util.Set;
 class Main{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int t = in.nextInt();
+		
 		Set<String> set = new HashSet<>();
-		
-		int sum = 0;
-		
+		set.add("ChongChong");
+		int t = in.nextInt();
 		for(int i=0;i<t;i++) {
-			String s = in.next();
-			if(s.equals("ENTER")) {
-				sum+=set.size();
-				set = new HashSet<>();
-			}else {
-				set.add(s);
+			String a = in.next();
+			String b = in.next();
+			
+			if(set.contains(a)) {
+				set.add(b);
+			}else if(set.contains(b)) {
+				set.add(a);
 			}
 		}
-		sum+=set.size();
-		System.out.println(sum);
+		
+		System.out.println(set.size());
 	}
 }
