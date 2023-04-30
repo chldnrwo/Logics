@@ -1,3 +1,4 @@
+package Baekjoon.Main;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,7 +9,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-class Main{
+class BOJ1706{
 	
 	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) {
