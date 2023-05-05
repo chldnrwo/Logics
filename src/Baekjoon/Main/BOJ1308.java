@@ -1,3 +1,4 @@
+package Baekjoon.Main;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-class Main{
+class BOJ1308{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
