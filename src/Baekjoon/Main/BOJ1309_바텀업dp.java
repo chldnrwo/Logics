@@ -1,6 +1,7 @@
+package Baekjoon.Main;
 import java.util.Scanner;
 
-public class Main {
+public class BOJ1309_바텀업dp {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
