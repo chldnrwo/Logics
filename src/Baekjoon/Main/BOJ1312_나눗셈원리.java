@@ -1,6 +1,7 @@
+package Baekjoon.Main;
 import java.util.Scanner;
 
-public class Main {
+public class BOJ1312_나눗셈원리 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         
