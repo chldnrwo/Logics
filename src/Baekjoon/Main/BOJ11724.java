@@ -1,10 +1,11 @@
+package Baekjoon.Main;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class BOJ11724 {
 	static List<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
 	static boolean[] visit;
 	static int cnt=0;
