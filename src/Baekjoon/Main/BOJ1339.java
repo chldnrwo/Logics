@@ -1,7 +1,8 @@
+package Baekjoon.Main;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class BOJ1339 {
     public static void main(String[] args) {
         
         //testcase 및 문자열 입력
