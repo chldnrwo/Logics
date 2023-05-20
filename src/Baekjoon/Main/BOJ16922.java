@@ -1,6 +1,7 @@
+package Baekjoon.Main;
 import java.util.*;
  
-public class Main{
+public class BOJ16922{
  
     static int list[] = { 1, 5, 10, 50 };
     static int arr[];
