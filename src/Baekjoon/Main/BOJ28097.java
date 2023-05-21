@@ -1,6 +1,7 @@
+package Baekjoon.Main;
 import java.util.*;
  
-public class Main{
+public class BOJ28097{
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
