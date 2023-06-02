@@ -1,3 +1,4 @@
+package Baekjoon.Main;
 //import java.util.*;
 // 
 //public class Main{
@@ -59,7 +60,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
 
-public class Main {
+public class BOJ10699 {
     public static void main(String[] args) {
         
     	Date date = new Date();
