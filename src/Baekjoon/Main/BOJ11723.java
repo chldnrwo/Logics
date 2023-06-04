@@ -1,10 +1,11 @@
+package Baekjoon.Main;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
 
-public class Main {
+public class BOJ11723 {
     public static void main(String[] args) {
         
     	Scanner in = new Scanner(System.in);
