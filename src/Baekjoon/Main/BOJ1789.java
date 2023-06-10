@@ -1,3 +1,4 @@
+package Baekjoon.Main;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
 
-public class Main {
+public class BOJ1789 {
     public static void main(String[] args) throws IOException {
         
     	Scanner in = new Scanner(System.in);
