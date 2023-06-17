@@ -11,13 +11,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         
     	Scanner in = new Scanner(System.in);
+    	//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	//StringTokenizer st = new StringTokenizer(br.readLine());
     	
-    	int n = in.nextInt();
-    	int m = in.nextInt();
-    	
-    	int sum = n * m -1;
-    	
-    	System.out.println(sum);
     }
 }
 
