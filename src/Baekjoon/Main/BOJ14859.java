@@ -1,6 +1,7 @@
+package Baekjoon.Main;
 import java.util.Scanner;
 
-public class Main {
+public class BOJ14859 {
 
     private static final int mx = (int)1e6 + 5;
     private static long[] mu = new long[mx];
