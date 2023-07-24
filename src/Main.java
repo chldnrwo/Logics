@@ -16,13 +16,24 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
     	Scanner in = new Scanner(System.in);
-    	int l = in.nextInt();
-    	int a = in.nextInt();
-    	int b = in.nextInt();
-    	int c = in.nextInt();
-    	int d = in.nextInt();
     	
-    	int res = (int)(l - (Math.max(a/(double)c, b/(double)d)));
-    	System.out.println(res);
+    	int n = in.nextInt();
+    	int[] arr = new int[n];
+    	for(int i=0;i<n;i++) {
+    		arr[i] = in.nextInt();
+    	}
+    	long sum = 0;
+    	int cnt = 1;
+    	for(int i=n-1;i>=0;i--) {
+    		if(arr[i]>cnt) {
+    			sum+=cnt;
+    			cnt = cnt+1;
+    		}else {
+    			sum+=arr[i];
+    			cnt = arr[i]+1;
+    		}
+    		
+    	}
+    	System.out.println(sum);
     }
 }
