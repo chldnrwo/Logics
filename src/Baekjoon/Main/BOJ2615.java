@@ -1,7 +1,8 @@
+package Baekjoon.Main;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Main{
+public class BOJ2615{
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		char[][] board = new char[19][19];
