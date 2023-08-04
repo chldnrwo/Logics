@@ -6,20 +6,13 @@ public class Main{
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
 		
-		int time = in.nextInt();
-		int minute = in.nextInt();
-		int second = in.nextInt();
+		int s = in.nextInt();
+		int p = in.nextInt();
 		
-		int sum = time * 3600 + minute * 60 + second;
-		int num = in.nextInt();
-		sum += num;
-				
-		time = (sum / 3600) % 24;
-		sum%=3600;
-		minute = (sum / 60) % 60;
-		sum%=60;
-		second = sum;
-		
-		System.out.println(time+" "+minute+" "+second);
+		String str = in.next();
+		int numA = in.nextInt();
+		int numC = in.nextInt();
+		int numG = in.nextInt();
+		int numT = in.nextInt();
 	}	
 }
