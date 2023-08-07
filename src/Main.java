@@ -1,43 +1,25 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.Stack;
 
 public class Main{
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
-		StringBuilder sb = new StringBuilder();
-		int t = in.nextInt();
-		Stack<Integer> stack = new Stack<>();
-		for(int i=0;i<t;i++) {
+		
+		Set<Integer> set = new HashSet<>();
+		for(int i=0;i<5;i++) {
 			int n = in.nextInt();
-			
-			if(n == 1) {
-				int num = in.nextInt();
-				stack.push(num);
-			}else if(n == 2) {
-				if(!stack.isEmpty()) {
-					sb.append(stack.pop()).append("\n");
-				}else{
-					sb.append(-1).append("\n");
-				}
-				
-			}else if(n == 3) {
-				sb.append(stack.size()).append("\n");
-			}else if(n == 4) {
-				if(!stack.isEmpty()) {
-					sb.append(0).append("\n");
-				}else{
-					sb.append(1).append("\n");
-				}
-			}else if(n == 5) {
-				if(!stack.isEmpty()) {
-					sb.append(stack.peek()).append("\n");
-				}else{
-					sb.append(-1).append("\n");
-				}
+			if(set.contains(n)) {
+				set.remove(n);
+			}else {
+				set.add(n);
 			}
 		}
-		System.out.println(sb);
+		System.out.println(set.toString().charAt(1));
 	}	
 }
