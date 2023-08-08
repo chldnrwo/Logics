@@ -11,15 +11,31 @@ public class Main{
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
 		
-		Set<Integer> set = new HashSet<>();
-		for(int i=0;i<5;i++) {
-			int n = in.nextInt();
-			if(set.contains(n)) {
-				set.remove(n);
-			}else {
-				set.add(n);
-			}
-		}
-		System.out.println(set.toString().charAt(1));
+//		int n = in.nextInt();
+//		String[] sarr = new String[n];
+//		
+//		for(int i =0;i<n;i++) {
+//			sarr[i] = in.next();
+//		}
+//		int n2 = in.nextInt();
+//		String[] sarr2 = new String[n2];
+//		for(int i =0;i<n2;i++) {
+//			sarr2[i] = in.next();
+//		}
+//		
+//		for(int i =0;i<n;i++) {
+//			if(sarr[i].equals("?")) {
+//				if(i == 0) {
+//					
+//				}
+//				else if(i == (n-1)) {
+//					
+//				}
+//				
+//				
+//				
+//			}
+//		}
+		System.out.println("힘내라~");
 	}	
 }
