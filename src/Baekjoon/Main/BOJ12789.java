@@ -1,3 +1,4 @@
+package Baekjoon.Main;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.Stack;
 
-public class Main{
+public class BOJ12789{
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
 		
