@@ -14,19 +14,30 @@ public class Main{
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
 		
-		String str = in.next();
-		
-		String[] arr = str.split("/");
-		int k = Integer.parseInt(arr[0]);
-		int d = Integer.parseInt(arr[1]);
-		int a = Integer.parseInt(arr[2]);
-		
-		if(k+a-d<0 || d==0) {
-			System.out.println("hasu");
-		} else {
-			System.out.println("gosu");
+		int[] arr = new int[9];
+		boolean[] check = new boolean[9];
+		int sum = 0;
+		for(int i=0;i<9;i++) {
+			arr[i] = in.nextInt();
+			sum += arr[i];
 		}
 		
+		sum -= 100;
+		
+		for(int i=0;i<9;i++) {
+			for(int j=i+1;j<9;j++) {
+				if(arr[i] + arr[j] == sum) {
+					check[i] = true;
+					check[j] = true;
+				}
+			}
+		}
+		
+		for(int i=0;i<9;i++) {
+			if(!check[i]) {
+				System.out.println(arr[i]);
+			}
+		}
 	}	
 }
 /*
