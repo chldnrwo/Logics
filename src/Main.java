@@ -13,46 +13,22 @@ import java.util.Stack;
 public class Main{
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int a = 0;
+		int b = 0;
+		int c = 0;
 		
-		int term = in.nextInt();
-		Stack<Pair> stack = new Stack();
-		int sum = 0;
+		a = n/300;
+		n %= 300;
+		b = n/60;
+		n %= 60;
+		c = n/10;
+		n %= 10;
 		
-		for(int i=0;i<term;i++) {
-			int n = in.nextInt();
-			Pair p = null;
-			
-			if(n == 1) {
-				int a = in.nextInt();
-				int t = in.nextInt();
-				t--;
-				p = new Pair(a,t);
-				stack.push(p);
-				
-			}else {
-				if(!stack.isEmpty()) {
-					p = stack.peek();
-					p.b--;
-				}
-			}
-			
-			if(!stack.isEmpty() && p.b == 0) {
-				
-				sum += p.a;
-				stack.pop();
-			}
+		if(n==0) {
+			System.out.println(a+" "+b+" "+c);
+		}else {
+			System.out.println(-1);
 		}
-		
-		
-		System.out.println(sum);
-	}
-	static class Pair {
-	    int a;
-	    int b;
-
-	    Pair(int a, int b) {
-	        this.a = a;
-	        this.b = b;
-	    }
 	}
 }
