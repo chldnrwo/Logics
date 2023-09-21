@@ -9,11 +9,8 @@ public class Main{
 		
 		int m = in.nextInt();
 		
-		if(n>m) {
-			System.out.println(2*m+1);
-		}else {
-			System.out.println(2*n-1);
-		}
+		double re = (n*m) / 2.0;
+		System.out.println(re);
 	}
 	
 }
