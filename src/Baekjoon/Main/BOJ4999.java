@@ -1,7 +1,8 @@
+package Baekjoon.Main;
 import java.math.BigInteger;
 import java.util.*;
 
-public class Main{
+public class BOJ4999{
 	static Integer[] arr;
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
