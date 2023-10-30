@@ -7,24 +7,19 @@ public class Main{
 		Scanner in = new Scanner(System.in);
 		
 		int n = in.nextInt();
-		int k = in.nextInt();
+		String s = in.next();
 		
-		int[] arr = new int[n];
-		
-		for(int i=0;i<n;i++) {
-			arr[i] = in.nextInt(); 	
-		}
-		
-		int clapCnt = 0;
-		int lastCnt = 0;
+		int cnt = 0;
 		
 		for(int i=0;i<n;i++) {
-			if(arr[i] > lastCnt) {
-				clapCnt++;
-				lastCnt = arr[i] + k;
+			//System.out.println(s.substring(i));
+			//System.out.println(s.substring(0, n-i));
+			//System.out.println();
+			if(s.substring(n-i).equals(s.substring(0, i))) {
+				cnt++;
 			}
 		}
-		System.out.println(clapCnt);
+		System.out.println(cnt);
 	}
 	
 }
