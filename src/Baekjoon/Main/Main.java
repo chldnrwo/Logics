@@ -1,3 +1,4 @@
+package Baekjoon.Main;
 
 import java.util.*;
 
@@ -17,7 +18,7 @@ public class Main{
 					System.out.println("nabi");
 					System.exit(0);
 				}else if(s.charAt(j) == 'g') {
-					System.out.println("yeongcheol");
+					System.out.println("yeungcheol");
 					System.exit(0);
 				}
 			}
