@@ -1,9 +1,10 @@
+package Baekjoon.Main;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main{
+public class BOJ13458{
 	static Integer[][] res;
 	static int[][] arr;
 	public static void main(String[] args) throws Exception{
