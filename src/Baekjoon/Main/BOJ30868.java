@@ -1,31 +1,27 @@
+package Baekjoon.Main;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main{
+public class BOJ30868{
 	public static void main(String[] args) throws Exception{
 		Scanner in = new Scanner(System.in);
 		
 		int n = in.nextInt();
 		
-		int souX = 0;
-		int souY = Integer.MAX_VALUE;
-				
-		
 		for(int i=0;i<n;i++) {
 			int a = in.nextInt();
-			int b = in.nextInt();
-			
-			if(b<souY) {
-				souX = a;
-				souY = b;
+			int b = a/5;
+			int c = a%5;
+			for(int j=0;j<b;j++) {
+				System.out.print("++++ ");
 			}
-			
-			
-			
+			for(int j=0;j<c;j++) {
+				System.out.print("|");
+			}
+			System.out.println();
 		}
-		System.out.println(souX +" "+ souY);
 	}
 
 }
