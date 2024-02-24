@@ -1,7 +1,8 @@
+package Baekjoon2024;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BOJ1325 {
 	static int n, m;					// n개 컴퓨터, m개 컴퓨타 신뢰 관계
 	static List<Integer>[] lists;		// 컴퓨터 신뢰 관계 (인접 리스트)
 	static int[] hackCounts;			// [i]번 컴퓨터를 해킹 했을때, 해킹 가능한 컴퓨터 수
