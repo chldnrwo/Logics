@@ -1,7 +1,8 @@
+package Baekjoon2024;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BOJ31432 {
 	public static void main(String[] args) throws IOException {
 		Scanner in = new Scanner(System.in);
 		
