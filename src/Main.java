@@ -6,24 +6,39 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		
 		int n = in.nextInt();
-		//int[] arr = new int[n];
-		int[] arr2 = new int[100001];
-		for(int i=0;i<n;i++) {
-			int a = in.nextInt();
-			arr2[a]++;
-		}
-		int max = 0;
+		int[] arr = new int[n];
 		
-		for(int i=0;i<100001;i++) {
-			if(arr2[i] > max) {
-				max = arr2[i];
+		
+		for(int i=0;i<n;i++) {
+			arr[i] = in.nextInt();
+			
+		}
+		for(int i=0;i<n;i++) {
+			if(arr[i]==0){
+				if(arr.length>1) {
+					System.out.println("YES");
+					System.out.println(arr[i+1]*10);
+					System.exit(0);
+				}else {
+					System.out.println("YES");
+					System.out.println(0);
+					System.exit(0);
+				}
+			}
+			if(arr[i]%2==0 || arr[i]==9) {
+				System.out.println("YES");
+				System.out.println(arr[i]);
+				System.exit(0);
+			}else if(arr[i]==3 || arr[i]==7 || arr[i]==5) {
+				System.out.println("YES");
+				System.out.println(arr[i]*11);
+				System.exit(0);
 			}
 		}
-		if((n-max) >= (max-1)) {
-			System.out.println("YES");
-		}else {
-			System.out.println("NO");
-		}
+		
+		System.out.println("NO");
+		System.exit(0);
+		
 		
 	}
 }
