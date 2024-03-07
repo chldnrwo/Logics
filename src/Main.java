@@ -26,5 +26,6 @@ public class Main {
 			}
 		}
 		System.out.println(cnt);
+		//new link git hub test
 	}
 }
