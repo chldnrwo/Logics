@@ -9,7 +9,7 @@ public class Main {
 		int n = in.nextInt();
 		double res = 0;
 		if(n<=30) {
-			res = n/2;
+			res = (double)n/2;
 		}else {
 			res = 15 + (double)(n-30)*3/2;
 		}
