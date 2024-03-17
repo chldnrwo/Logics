@@ -1,7 +1,8 @@
+package Baekjoon2024;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BOJ1926 {
 	static int cnt,max,n,m;
 	static int[] nx = {-1,0,1,0};
 	static int[] ny = {0,-1,0,1};
