@@ -1,9 +1,10 @@
+package Baekjoon2024;
 import java.util.*;
 import java.io.*;
  
 
  
-class Main {
+class BOJ2075 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
