@@ -1,7 +1,8 @@
+package Baekjoon2024;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BOJ1389 {
 	static int n,m;
 	static List<ArrayList<Integer>> list ;
 	public static void main(String[] args) throws IOException {
