@@ -1,9 +1,10 @@
+package Baekjoon2024;
 import java.util.*;
 import java.io.*;
  
 
  
-class Main {
+class BOJ15663 {
 	static StringBuilder sb;
 	static int n,m;
 	static int[] arr, res;
