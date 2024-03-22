@@ -1,9 +1,10 @@
+package Baekjoon2024;
 import java.util.*;
 import java.io.*;
  
 
  
-class Main {
+class BOJ2644 {
 	static int n, m, tar, get;
 	static List<ArrayList<Integer>> list;
     public static void main(String[] args) throws Exception {
