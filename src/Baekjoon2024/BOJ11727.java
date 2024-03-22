@@ -1,9 +1,10 @@
+package Baekjoon2024;
 import java.util.*;
 import java.io.*;
  
 
  
-class Main {
+class BOJ11727 {
 	static int[] arr;
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
