@@ -1,10 +1,11 @@
+package Baekjoon2024;
 import java.util.*;
 import java.io.*;
 import java.math.BigInteger;
  
 
  
-class Main {
+class BOJ1914 {
 	static StringBuilder sb;
 	static int n;
 	static BigInteger[] arr;
