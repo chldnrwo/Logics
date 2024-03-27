@@ -1,10 +1,11 @@
+package Baekjoon2024;
 import java.util.*;
 import java.io.*;
 import java.math.BigInteger;
  
 
  
-class Main {
+class BOJ18352_true {
 	static int n,m,k,start;
 	static List<ArrayList<Integer>> list;
 	static StringBuilder sb;
