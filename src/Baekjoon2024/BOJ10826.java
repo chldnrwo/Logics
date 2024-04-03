@@ -1,10 +1,11 @@
+package Baekjoon2024;
 import java.util.*;
 import java.io.*;
 import java.math.BigInteger;
  
 
  
-class Main {
+class BOJ10826 {
 	static BigInteger[] arr;
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
