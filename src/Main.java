@@ -8,14 +8,28 @@ class Main {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
         
-        System.out.println("       _.-;;-._\n"
-        		+ "'-..-'|   ||   |\n"
-        		+ "'-..-'|_.-;;-._|\n"
-        		+ "'-..-'|   ||   |\n"
-        		+ "'-..-'|_.-''-._|");
+        long a = in.nextLong();
+        long b = in.nextLong();
+        
+        if(a>=b) {
+        	System.out.println(0);
+        	System.exit(0);
+        }
+        
+        
+        
     }
     
   
   
 } 
- 
+ /*
+  5 7 5
+  20 7 6
+  18 7 4
+  8 7 1
+  
+  
+  
+  
+  */
