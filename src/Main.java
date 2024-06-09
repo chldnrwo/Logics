@@ -12,6 +12,7 @@ class Main {
            arr[i] = in.nextInt();
        }
        
+
        int max = 0;
        int a = 0;
        int b = 0;
@@ -40,5 +41,6 @@ class Main {
     	   max = Math.max(max, b-a);
        }
        System.out.println(max);
+
     }
 }
