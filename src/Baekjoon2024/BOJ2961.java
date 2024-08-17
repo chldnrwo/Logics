@@ -1,9 +1,10 @@
+package Baekjoon2024;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class Main {
+public class BOJ2961 {
 	static int n;
 	static int[] arr;
 	static int[] brr;
