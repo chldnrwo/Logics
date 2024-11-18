@@ -8,28 +8,12 @@ public class Main {
     public static void main(String[] args) throws Exception {
     	Scanner in = new Scanner(System.in);
     	int n = in.nextInt();
-    	int a = in.nextInt();
-    	int b = in.nextInt();
-    	
-    	int ching = 1;
-    	int binan = 1;
-    	for(int i=0;i<n;i++){
-    		ching+=a;
-    		binan+=b;
-    		if(ching < binan) {
-    			int tmp = 0;
-    			tmp = ching;
-    			ching = binan;
-    			binan = tmp;
-    		}else if(ching == binan) {
-    			binan--;
-    		}
-
+    	if(n<=100000 && (n%2024==0)) {
+    		System.out.println("Yes");
+    	}else {
+    		System.out.println("No");
     	}
-    	
-    	System.out.println(ching+" "+binan);
     } 
    
     
 }
-//92 5
